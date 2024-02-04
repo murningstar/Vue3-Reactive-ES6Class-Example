@@ -18,7 +18,7 @@ In the first snippet we define `Counter` class that consists of:
 -   customized `constructor()` that makes possible mutating `this` directly from methods
 
 ```js
-# /src/classes/Counter.ts
+// /src/classes/Counter.ts
 
 export class Counter {
     count: number;
@@ -46,8 +46,8 @@ export class Counter {
 
 ### /src/App.vue
 
-```js
-# /src/App.vue
+```vue
+// /src/App.vue
 
 <script setup lang="ts">
 import { Counter } from "@/classes/Counter";
