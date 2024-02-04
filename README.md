@@ -15,7 +15,7 @@ In the first snippet we define `Counter` class that consists of:
 
 -   `count` property
 -   `increment()` method (mutating `count` via `this.count++`)
--   customized `constructor()` that allows `increment` mutate `this` via
+-   customized `constructor()` that makes possible mutating `this` directly from methods
 
 ```js
 # /src/classes/Counter.ts
