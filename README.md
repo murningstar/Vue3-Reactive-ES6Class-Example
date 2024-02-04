@@ -47,8 +47,6 @@ export class Counter {
 ### /src/App.vue
 
 ```vue
-// /src/App.vue
-
 <script setup lang="ts">
 import { Counter } from "@/classes/Counter";
 const instance = new Counter();
