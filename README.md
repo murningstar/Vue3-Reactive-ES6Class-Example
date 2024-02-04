@@ -55,7 +55,7 @@ const instance = new Counter();
 </script>
 
 <template>
-    <div class="count"> {{ instance.count }} </div>
+    <div> {{ instance.count }} </div>
     <button @click="instance.increment()"> increment </button>
     <button @click="instance.count = 69"> Mutate directly </button>
 </template>
