@@ -20,6 +20,8 @@ In the first snippet we define `Counter` class that consists of:
 ```js
 // /src/classes/Counter.ts
 
+import { reactive } from "vue";
+
 export class Counter {
     count: number;
 
@@ -27,7 +29,7 @@ export class Counter {
         this.count = 0;
         const reactiveThis = reactive(this);
         Object.keys(this).forEach((key) => {
-            //@ts-ignore // these lines produce some type errors, just ignore them
+            //@ts-ignore
             if (typeof this[key] == "function") {
                 //@ts-ignore
                 reactiveThis[key] = this[key].bind(reactiveThis);
@@ -53,9 +55,9 @@ const instance = new Counter();
 </script>
 
 <template>
-    <div class="count" :style="{ backgroundColor }"> {{ instance.count }} </div>
-    <button @click="instance.increment()"> increment </button>
-    <button @click="instance.count=69"> Mutate directly </button>
+    <div class="count" :style="{ backgroundColor }">{{ instance.count }}</div>
+    <button @click="instance.increment()">increment</button>
+    <button @click="instance.count = 69">Mutate directly</button>
 </template>
 
 <style scoped></style>
