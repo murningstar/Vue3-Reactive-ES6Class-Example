@@ -29,7 +29,7 @@ export class Counter {
         this.count = 0;
         const reactiveThis = reactive(this);
         Object.keys(this).forEach((key) => {
-            //@ts-ignore
+            //@ts-ignore // These two lines produce type errors, just ignore them
             if (typeof this[key] == "function") {
                 //@ts-ignore
                 reactiveThis[key] = this[key].bind(reactiveThis);
